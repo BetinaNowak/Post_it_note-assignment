@@ -1,1 +1,2 @@
-# Post_it_note-assignment
+# PostIt
+Post-it note assignment.

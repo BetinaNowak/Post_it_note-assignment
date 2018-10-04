@@ -1,0 +1,472 @@
+postit.css@charset "UTF-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Indie Flower', cursive;
+}
+
+.top {
+  width: 100%;
+  box-shadow: 2px 3px 5px -5px #262626;
+  margin-bottom: 20px;
+  color: black;
+}
+
+h1 {
+  display: block;
+  float: left;
+  padding: 10px;
+  color: black;
+  width: 30%;
+}
+
+.add_note {
+  background: linear-gradient(135deg, #f5e572, lightgoldenrodyellow);
+  padding: 0 15px 0 15px;
+  box-shadow: 2px 3px 5px -5px #262626;
+  border-bottom-right-radius: 150px 15px;
+  transform: rotate(-3deg);
+  height: 60px;
+  margin: 15px;
+  float: right;
+  color: black;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+#formular {
+  width: 90%;
+  text-align: center;
+}
+
+#postit {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  box-shadow: 2px 3px 5px -5px #262626;
+  border-bottom-right-radius: 150px 15px;
+  transform: rotate(-3deg);
+  margin: 50px 40px 40px 70px;
+  -moz-transition: -moz-transform .15s linear;
+  -o-transition: -o-transform .15s linear;
+  -webkit-transition: -webkit-transform .15s linear;
+}
+
+#postit:hover {
+  box-shadow: 3px 3px 7px rgba(0,0,0,.7);
+  -moz-box-shadow: 3px 3px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+#choose_color {
+	display: flex;
+	width: 100%;
+}
+
+#choose_color_box {
+	margin: 5px;
+	border: solid 1px rgb(15, 25, 26);
+	height: 20px;
+	width: 20px;
+}
+
+form .postit {
+  margin-left: 12%;
+}
+
+.text {
+  width: 80%;
+  height: 40px;
+  margin-bottom: 30px;
+  background: none;
+  border: none;
+  border-bottom: solid 1px black;
+  font-size: 15px;
+}
+
+.text.trash_img {
+  width: 25%;
+  height: 30%;
+  border: none;
+}
+
+.text:focus {
+  outline: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+textarea {
+  width: 80%;
+  margin-bottom: 30px;
+  padding: 20px 0 0 0;
+  border: none;
+  border-bottom: solid 1px black;
+  font-size: 15px;
+}
+
+textarea:focus {
+  outline: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+.content {
+  max-height: 80px;
+  max-width: 80%;
+  height: 40px;
+  margin-bottom: 30px;
+  margin-left: 0;
+  border: none;
+  font-size: 15px;
+  border-bottom: solid 1px black;
+	border-radius: 7px;
+}
+
+.content:focus {
+  outline: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+#p_choose_color {
+	font-size: 18px;
+	margin-top: 0;
+}
+
+.submit {
+  width: 80%;
+  height: 60px;
+  border-radius: 10px;
+  background: #f4d742;
+  text-decoration: none;
+  border: solid 1px black;
+  font-family: 'Indie Flower', cursive;
+  margin-top: 40px;
+  cursor: pointer;
+  float: left;
+}
+
+::placeholder {
+  color: #525252;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+}
+
+.postit_modal {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  transform: none;
+  background: linear-gradient(135deg, #f5e572, lightgoldenrodyellow);
+  margin-left: 20%;
+  margin-top: 100px;
+}
+
+.postit_modal input {
+  display: block;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.4em;
+}
+
+.postit:nth-child(2) {
+  transform: rotate(4deg);
+}
+
+.postit:nth-child(3) {
+  transform: rotate(-6deg);
+}
+
+.postit:nth-child(4) {
+  transform: rotate(6deg);
+}
+
+.postit:nth-child(5) {
+  transform: rotate(4deg);
+}
+
+.postit:nth-child(6) {
+  transform: rotate(-4deg);
+}
+
+.headline_postit {
+  font-size: 20px;
+	margin-top: 0;
+}
+
+.form_header {
+  margin-top: 50px;
+}
+
+.contenttext {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.name {
+  width: 100%;
+  margin-bottom: 0;
+	border-top: 1px solid rgb(208, 208, 208);
+}
+
+.date {
+  width: 100%;
+  margin-bottom: 0;
+	margin-top: 0;
+  text-align: right;
+  font-size: 12px;
+
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Close Button */
+.close {
+  color: black;
+  float: right;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#deleteform {
+  margin-left: 85%;
+}
+
+.trash_img {
+  width: 25px;
+  height: 25px;
+}
+
+.user {
+  width: 30%;
+  margin-bottom: 20px;
+  float: right;
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: white;
+  padding: 5px;
+  box-shadow: 2px 3px 5px -5px #262626;
+  margin: 15px;
+  color: black;
+  font-size: 15px;
+  border: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+.login {
+  margin: 0 auto;
+}
+
+.colorid {
+  background: none;
+  padding: 5px;
+  box-shadow: 2px 3px 5px -5px #262626;
+  margin-top: 30px;
+  color: black;
+  font-size: 20px;
+  float: left;
+  border: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+.postityellow {
+  background: linear-gradient(135deg, #f5e572, lightgoldenrodyellow);
+}
+
+.postitgreen {
+  background: linear-gradient(135deg, #4fbd47, #85af7d);
+}
+
+.postitred {
+  background: linear-gradient(135deg, #c84a37, #de6868);
+}
+
+.postitblue {
+  background: linear-gradient(135deg, #4E8AAA, #7fc1dd);
+}
+
+.logout_btn {
+  background: linear-gradient(135deg, #D0353D, #9a5d5d);
+  padding: 0 15px 0 15px;
+  box-shadow: 2px 3px 5px -5px #262626;
+  border-bottom-right-radius: 150px 15px;
+  transform: rotate(-3deg);
+  height: 60px;
+  margin: 15px;
+  float: right;
+  color: black;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.pimp {
+  height: 280px;
+  width: 280px;
+  background: linear-gradient(135deg, #f5e572, lightgoldenrodyellow);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+  position: absolute;
+  box-shadow: 2px 3px 5px -5px #262626;
+  border-bottom-right-radius: 150px 15px;
+  animation: yourAnimation 1s 1 0s linear;
+}
+
+.pimp p {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation */
+
+@keyframes yourAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(xx);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+
+  form .postit {
+    margin-left: 11%;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .contenttext {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  .name {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  .date {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .headerform {
+    font-size: 25px;
+  }
+
+  #formular {
+    width: 90%;
+  }
+
+  .postit {
+    height: 550px;
+    width: 65%;
+  }
+
+  .close {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  input {
+    width: 90%;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  textarea {
+    margin-bottom: 0;
+    font-size: 20px;
+    height: 30px;
+    width: 90%;
+		background: white;
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  .user {
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  ::placeholder {
+    font-size: 15px;
+  }
